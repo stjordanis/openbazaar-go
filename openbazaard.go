@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"os/signal"
+	"path/filepath"
+
 	"github.com/OpenBazaar/openbazaar-go/cmd"
 	"github.com/OpenBazaar/openbazaar-go/core"
 	"github.com/ipfs/go-ipfs/repo/fsrepo"
 	"github.com/jessevdk/go-flags"
 	"github.com/op/go-logging"
-	"os"
-	"os/signal"
-	"path/filepath"
 )
 
 var log = logging.MustGetLogger("main")
@@ -38,10 +39,13 @@ func main() {
 			log.Info("OpenBazaar Server shutting down...")
 			if core.Node != nil {
 				if core.Node.MessageRetriever != nil {
+					fmt.Println("stopping message retriever")
 					core.Node.RecordAgingNotifier.Stop()
 					close(core.Node.MessageRetriever.DoneChan)
+					fmt.Println("waiting for messageretriver")
 					core.Node.MessageRetriever.Wait()
 				}
+				fmt.Println("waiting for OfflineMessageWaitGroup")
 				core.OfflineMessageWaitGroup.Wait()
 				core.PublishLock.Lock()
 				core.Node.Datastore.Close()

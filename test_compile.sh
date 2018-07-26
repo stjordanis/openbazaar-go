@@ -4,9 +4,8 @@ set -e
 pwd
 go test -i
 go test -coverprofile=api.cover.out ./api
-go test -coverprofile=bitcoin.cover.out ./bitcoin
-go test -coverprofile=bitcoin.listeners.cover.out ./bitcoin/listeners
-go test -coverprofile=bitcoin.bitcoind.cover.out ./bitcoin
+go test -coverprofile=wallet.cover.out ./wallet
+go test -coverprofile=wallet.listeners.cover.out ./wallet/listeners
 go test -coverprofile=core.cover.out ./core
 go test -coverprofile=ipfs.cover.out ./ipfs
 go test -coverprofile=net.cover.out ./net

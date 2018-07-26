@@ -113,7 +113,7 @@ func TestGetWalletsConfig(t *testing.T) {
 	if config.BTC.HighFeeDefault != 50 {
 		t.Error("Expected high to be 50, got ", config.BTC.HighFeeDefault)
 	}
-	if config.BTC.MaxFee != 200 {
+	if config.BCH.MaxFee != 200 {
 		t.Error("Expected maxFee to be 200, got ", config.BTC.MaxFee)
 	}
 

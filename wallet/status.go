@@ -1,4 +1,4 @@
-package bitcoin
+package wallet
 
 import (
 	"context"

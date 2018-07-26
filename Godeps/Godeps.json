@@ -12,8 +12,80 @@
 			"Rev": "d805c545cd74f4ae0cca2b64a739771a14dfbaaf"
 		},
 		{
+			"ImportPath": "github.com/OpenBazaar/golang-socketio",
+			"Rev": "9fab7b0eb211a7134cea662b8de11496a41de94e"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/golang-socketio/protocol",
+			"Rev": "9fab7b0eb211a7134cea662b8de11496a41de94e"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/golang-socketio/transport",
+			"Rev": "9fab7b0eb211a7134cea662b8de11496a41de94e"
+		},
+		{
 			"ImportPath": "github.com/OpenBazaar/jsonpb",
 			"Rev": "37d32ddf4eefaab6c19a01c99f4e00df9b1be48f"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/bitcoin",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/bitcoincash",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/client",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/client/transport",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/config",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/datastore",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/keys",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/litecoin",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/litecoin/address",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/litecoin/params",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/service",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/util",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/zcash",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
+		},
+		{
+			"ImportPath": "github.com/OpenBazaar/multiwallet/zcash/address",
+			"Rev": "c9a7b81ead8582c8b34da7d5fd87047181d7bb47"
 		},
 		{
 			"ImportPath": "github.com/OpenBazaar/spvwallet",
@@ -159,6 +231,10 @@
 		{
 			"ImportPath": "github.com/btcsuite/go-socks/socks",
 			"Rev": "4720035b7bfd2a9bb130b1c184f8bbe41b6f0d0f"
+		},
+		{
+			"ImportPath": "github.com/btcsuite/golangcrypto/ripemd160",
+			"Rev": "53f62d9b43e87a6c56975cf862af7edf33a8d0df"
 		},
 		{
 			"ImportPath": "github.com/btcsuite/goleveldb/leveldb/errors",
@@ -652,6 +728,26 @@
 			"Rev": "2e6820834a1f36c626bf19a253b7d3cc060e9b8b"
 		},
 		{
+			"ImportPath": "github.com/ltcsuite/ltcd/chaincfg",
+			"Comment": "BTCD_0_8_0_BETA-2231-g92a0feb9",
+			"Rev": "92a0feb9b86f5971655013115ea4f95949403592"
+		},
+		{
+			"ImportPath": "github.com/ltcsuite/ltcd/chaincfg/chainhash",
+			"Comment": "BTCD_0_8_0_BETA-2231-g92a0feb9",
+			"Rev": "92a0feb9b86f5971655013115ea4f95949403592"
+		},
+		{
+			"ImportPath": "github.com/ltcsuite/ltcd/wire",
+			"Comment": "BTCD_0_8_0_BETA-2231-g92a0feb9",
+			"Rev": "92a0feb9b86f5971655013115ea4f95949403592"
+		},
+		{
+			"ImportPath": "github.com/ltcsuite/ltcutil/base58",
+			"Comment": "BTCUTIL_0_4_0-109-ga88d7df",
+			"Rev": "a88d7dfb1c02af5dffe005ad21f40c42d9fd5ad0"
+		},
+		{
 			"ImportPath": "github.com/mattn/go-colorable",
 			"Comment": "v0.0.9-14-gefa5899",
 			"Rev": "efa589957cd060542a26d2dd7832fd6a6c6c3ade"
@@ -737,6 +833,10 @@
 		},
 		{
 			"ImportPath": "golang.org/x/crypto/salsa20/salsa",
+			"Rev": "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/scrypt",
 			"Rev": "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
 		},
 		{

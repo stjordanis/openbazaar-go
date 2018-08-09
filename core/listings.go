@@ -71,7 +71,9 @@ const (
 	// DefaultCoinDivisibility - decimals for price
 	DefaultCoinDivisibility uint32 = 1e8
 
-	priceModifierListingVersion = 4
+	// PriceModifierListingVersion is the listing version that introduces crypto
+	// listing markup
+	PriceModifierListingVersion = 4
 )
 
 type price struct {
@@ -1347,12 +1349,22 @@ func verifySignaturesOnListing(sl *pb.SignedListing) error {
 }
 
 func versionForNewListing(listing *pb.Listing) uint32 {
-	// Don't use newer version number of the listing doesn't have new features
-	if ListingVersion == priceModifierListingVersion &&
-		listing.Metadata.Format == pb.Listing_Metadata_MARKET_PRICE &&
-		listing.Metadata.PriceModifier != 0 {
-		return priceModifierListingVersion - 1
+	return VersionForNewListingAndCurrentVersion(listing, ListingVersion)
+}
+
+// VersionForNewListingAndCurrentVersion determines the listing version to use
+// based on the listing state and the given current version.
+func VersionForNewListingAndCurrentVersion(listing *pb.Listing, currentVersion uint32) uint32 {
+	// Return currentVersion unless this is the version introducing price modifiers
+	if currentVersion != PriceModifierListingVersion {
+		return currentVersion
 	}
 
-	return ListingVersion
+	// If the listing has a price modifier use the currentVersion
+	if listing.Metadata.Format == pb.Listing_Metadata_MARKET_PRICE && listing.Metadata.PriceModifier != 0 {
+		return currentVersion
+	}
+
+	// Otherwise the listing doesn't have new features; use previous version
+	return currentVersion - 1
 }
